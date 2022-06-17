@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex View</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: rgb(123, 217, 234);
+            height: 100vh;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        main > div {
+            display:flex;
+            align-items: center;
+            width: 36rem;
+            height: 22.5rem;
+            gap: 0;
+            margin: auto;
+        }
+
+        .card {
+            height: 100%;
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            width: 12rem;
+            color: white;
+            font-family: 'Lexend Deca', sans-serif;
+            font-size: 0.55rem;
+            
+        }
+
+        .card h1 {
+            font-family: 'Big Shoulders Display', cursive;
+            font-size: 2rem;
+            margin: 20px 0;
+        }
+
+        .card p {
+            height: 7rem;
+            line-height: 1.25rem;
+        }
+
+
+        .card img {
+            height: 30px;
+            width: 45px;
+        }
+
+        .card:nth-child(1) {
+            background-color: rgb(225,133,36);
+            border-radius: 5px 0 0 5px;
+        }
+
+        .card:nth-child(2) {
+            background-color: rgb(0,105,113);
+        }
+
+        .card:nth-child(3) {
+            background-color: rgb(1,64,62);
+            border-radius: 0 5px 5px 0;
+        }
+
+        .card button {
+            width: 60%;
+            background-color: white;
+            border: 0;
+            border-radius: 0.75rem;
+            height: 1.5rem;
+            cursor: pointer;
+            font-size: 0.55rem;
+        }
+
+        .card button:nth-child(1) {
+            color: rgb(169, 169, 169)
+        } 
+
+        .card button:nth-child(1) {
+            color: rgb(0,105,113)
+        }
+
+        .card button:nth-child(1) {
+            color: rgb(1,64,62)
+        }
+
+        .card button:hover {
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        #route {
+            margin: 70px auto;
+            width: 10rem;
+            height: 4rem;
+            border-radius: 10px;
+            background: linear-gradient(45deg, rgb(169, 169, 169), rgb(1,64,62));
+            cursor: pointer;
+            
+        }
+
+        #route a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Lexend Deca', sans-serif;
+        }
+
+        @media screen and (max-width: 600px) {
+            main > div {
+                width: 450px;
+                aspect-ratio: 24/15;
+
+            }
+
+            .card {
+                width: 150px;
+            }
+        }
+
+        @media screen and (max-width: 375px) {
+            main > div {
+                width: 300px;
+                aspect-ratio: 24/15;
+
+            }
+
+            .card {
+                width: 100px;
+                padding: 10px;
+            }
+
+            .card h1 {
+                font-size: 1.5rem;
+            }
+
+            .card img {
+                height: 18px;
+                width: 27px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <div class="card">
+                <div>
+                    <img src="images/icon-sedans.svg" alt="sedan-car"/>
+                    <h1>
+                        SEDANS
+                    </h1>
+                    <p>
+                        Choose a sedan for its affordability and excellent fuel economy.
+                        Ideal for cruising in the city or on your next road trip.
+                    </p>
+                </div>
+                
+                <button>
+                    Learn More
+                </button>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/icon-suvs.svg" alt="luxury-car"/>
+                    <h1>
+                        SUVS
+                    </h1>
+                    <p>
+                        Take an SUV for its spacious interior, power, and versatility.
+                        Perfect for your next family vacations and off-road adventures.
+                    </p>
+                </div>
+                
+                <button>
+                    Learn More
+                </button>
+            </div>
+            <div class="card">
+                <div>
+                    <img src="images/icon-luxury.svg" alt="luxury-car"/>
+                    <h1>
+                        LUXURY
+                    </h1>
+                    <p>
+                        Cruise in the best car brands without the bloated prices.
+                        Enjoy the enhanced comfort of a luxury rental and ride in style.
+                    </p>
+                </div>
+                
+                <button>
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <button id="route"> 
+            <a href="grid.html">Grid View</a>
+        </button>
+    </main>
+</body>
+</html>
